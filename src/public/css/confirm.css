@@ -1,0 +1,173 @@
+body {
+    background-color: #F8F5F2;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #E0E0E0;
+    box-shadow: none;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header-content-wrapper {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.header-title {
+    font-family: 'Inika', serif;
+    font-size: 2.5rem;
+    color: #8B7969;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.confirm-container {
+    width: 100%;
+    max-width: 700px;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 50px auto;
+}
+
+.confirm-title {
+    font-family: 'Inika', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #8B7969;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-table th,
+.confirm-table td {
+    padding: 15px 0;
+    border-bottom: 1px solid #E0DCD9;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.confirm-table tr:last-child th,
+.confirm-table tr:last-child td {
+    border-bottom: none;
+}
+
+.confirm-table th {
+    width: 150px;
+    font-weight: 650;
+    background-color: #A08C7D;
+    color: #FFFFFF;
+    vertical-align: middle;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.confirm-table td {
+    font-weight: 400;
+    padding-right: 20px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.confirm-table .form-input-display {
+    background-color: #FFFFFF;
+    padding: 12px 15px;
+    border-radius: 0;
+    border: none;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+    font-family: sans-serif;
+    color: #A08C7D;
+    /* テストのため一時的に赤色に変更 */
+}
+
+.confirm-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.confirm-buttons-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.confirm-button {
+    display: block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
+    width: 200px;
+    font-family: 'Inika', serif;
+}
+
+.submit-button {
+    background-color: #A08C7D;
+    color: #fff;
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: #8B7969;
+}
+
+.back-button {
+    background-color: #FFFFFF;
+    color: #A08C7D;
+    border: 1px solid #A08C7D;
+}
+
+.back-button:hover {
+    background-color: #F0F0F0;
+}

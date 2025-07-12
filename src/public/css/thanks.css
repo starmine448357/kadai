@@ -1,0 +1,70 @@
+body {
+    background-color: #F8F5F2;
+    /* スクリーンショットの背景色に合わせる */
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ヘッダーのスタイルは不要になるため削除 */
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* 背景の透かし文字のスタイル */
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Inika', serif;
+    font-size: 15rem;
+    color: rgba(220, 207, 197, 0.3);
+    /* 透明度をさらに下げて薄くする (0.6 -> 0.3) */
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* サンクスコンテナのスタイル */
+.thanks-container {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+/* メッセージのスタイル */
+.thanks-message {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    color: #8B7969;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* HOMEボタンのスタイル */
+.home-button {
+    background-color: #8B7A6C;
+    color: #fff;
+    padding: 12px 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-family: 'Inika', serif;
+}
+
+.home-button:hover {
+    background-color: #7a6b5e;
+}

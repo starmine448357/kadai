@@ -1,0 +1,117 @@
+body {
+    background-color: #f5f0ea;
+    /* ページ背景オフホワイト系 */
+    font-family: 'Inter', sans-serif;
+    color: #8B7A6C;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    /* ヘッダー柔らかいベージュ */
+    padding: 20px 40px;
+}
+
+.header-content-wrapper {
+    position: relative;
+    height: 60px;
+}
+
+.header-title {
+    font-family: 'Inika', serif;
+    font-size: 2rem;
+    color: #8B7A6C;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+}
+.header-auth-button {
+    font-family: 'Inika', serif;
+    color: #8B7A6C;
+    border: 1px solid #8B7A6C;
+    padding: 6px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-auth-button:hover {
+    background-color: #d8cec6;
+    color: #6c5c50;
+}
+
+.page-title {
+    text-align: center;
+    font-family: 'Inika', serif;
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: #8B7A6C;
+}
+
+.auth-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0dad4;
+}
+
+label {
+    display: block;
+    margin: 20px 0 5px;
+    font-weight: bold;
+    color: #8B7A6C;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    color: #8B7A6C;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8B7A6C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6c5c50;
+}
+
+.error-messages {
+    color: red;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
