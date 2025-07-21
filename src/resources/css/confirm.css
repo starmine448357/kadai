@@ -1,0 +1,161 @@
+/* public/css/confirm.css */
+
+/* 確認フォーム全体を囲むコンテナ */
+.confirm-container {
+    width: 100%;
+    max-width: 700px;
+    /* フォームの最大幅と合わせる */
+    background-color: #fff;
+    /* 白い背景 */
+    padding: 50px;
+    /* 内側の余白 */
+    border-radius: 10px;
+    /* 角の丸み */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* 影 */
+    margin: 50px auto;
+    /* 上下左右中央に配置 */
+}
+
+/* タイトル「お問い合わせ内容確認」 */
+.confirm-title {
+    font-family: 'Inika', serif;
+    /* Inikaフォントを使用 */
+    font-size: 2rem;
+    /* フォントサイズ */
+    font-weight: 400;
+    /* フォントの太さ */
+    color: #8B7969;
+    /* 文字色 */
+    text-align: center;
+    /* 中央寄せ */
+    margin-bottom: 40px;
+    /* 下部の余白 */
+}
+
+/* 確認テーブルのスタイル */
+.confirm-table {
+    width: 100%;
+    /* 幅を100%に */
+    border-collapse: collapse;
+    /* ボーダーを結合 */
+    margin-bottom: 30px;
+    /* 下部の余白 */
+}
+
+.confirm-table th,
+.confirm-table td {
+    padding: 15px 0;
+    /* 上下のパディング */
+    border-bottom: 1px solid #eee;
+    /* 下線 */
+    text-align: left;
+    /* 左寄せ */
+    font-size: 0.95rem;
+    /* フォントサイズ */
+    color: #333;
+    /* 文字色 */
+}
+
+.confirm-table th {
+    width: 150px;
+    /* ラベル列の幅 */
+    font-weight: 650;
+    /* 太字 */
+    color: #8B7969;
+    /* ラベルの色 */
+    vertical-align: top;
+    /* 上揃え */
+    padding-left: 20px;
+    /* 左側のパディング */
+}
+
+.confirm-table td {
+    font-weight: 400;
+    /* 通常の太さ */
+    padding-right: 20px;
+    /* 右側のパディング */
+}
+
+/* 表示用入力値のスタイル */
+.form-input-display {
+    background-color: #F4F4F4;
+    /* 背景色 */
+    padding: 12px 15px;
+    /* 内側の余白 */
+    border-radius: 5px;
+    /* 角の丸み */
+    border: 1px solid #ddd;
+    /* ボーダー */
+    min-height: 44px;
+    /* 入力フィールドと高さを合わせる */
+    display: flex;
+    align-items: center;
+    /* 垂直方向の中央揃え */
+    word-break: break-all;
+    /* 長い文字列を折り返す */
+}
+
+/* ボタン群のスタイル */
+.confirm-buttons {
+    display: flex;
+    /* Flexbox */
+    flex-direction: column;
+    /* 縦に並べる */
+    align-items: center;
+    /* 中央寄せ */
+    gap: 20px;
+    /* ボタン間の隙間 */
+    margin-top: 20px;
+}
+
+.confirm-button {
+    display: block;
+    /* ブロック要素 */
+    padding: 12px 30px;
+    /* 内側の余白 */
+    border-radius: 5px;
+    /* 角の丸み */
+    font-size: 1.1rem;
+    /* フォントサイズ */
+    font-weight: 700;
+    /* フォントの太さ */
+    cursor: pointer;
+    /* カーソルをポインターに */
+    transition: background-color 0.2s ease-in-out;
+    /* トランジション効果 */
+    text-align: center;
+    /* 中央寄せ */
+    width: 200px;
+    /* 幅 */
+    font-family: 'Inika', serif;
+    /* Inikaフォントを適用 */
+}
+
+.submit-button {
+    background-color: #8B7A6C;
+    /* 送信ボタンの背景色 */
+    color: #fff;
+    /* 文字色 */
+    border: none;
+    /* ボーダーなし */
+}
+
+.submit-button:hover {
+    background-color: #7a6b5e;
+    /* ホバー時の色 */
+}
+
+.back-button {
+    background-color: #fff;
+    /* 修正ボタンの背景色 */
+    color: #8B7A6C;
+    /* 文字色 */
+    border: 1px solid #8B7A6C;
+    /* ボーダー */
+}
+
+.back-button:hover {
+    background-color: #f0f0f0;
+    /* ホバー時の色 */
+}

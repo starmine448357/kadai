@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Kadai;
 
 class KadaiController extends Controller
 {
@@ -13,7 +14,8 @@ class KadaiController extends Controller
      */
     public function index()
     {
-        //
+        $kadaiList = Kadai::all(); // 全件取得
+    return view('kadai.index', compact('kadaiList'));
     }
 
     /**
@@ -23,7 +25,7 @@ class KadaiController extends Controller
      */
     public function create()
     {
-        //
+        return view('kadai.create');
     }
 
     /**
@@ -34,7 +36,12 @@ class KadaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'titles' => 'required|max:255',
+            'descriptions' => 'required',
+        ]);
+        Kadai::create($validated);
+        return redirect()->route('kadai.index')->with('message', '課題を登録しました！');
     }
 
     /**

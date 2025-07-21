@@ -1,0 +1,293 @@
+/* public/css/contact.css */
+
+/* お問い合わせフォーム全体を囲むコンテナ */
+.contact-container {
+    width: 100%;
+    max-width: 700px;
+    /* フォームの最大幅 */
+    background-color: #FFFFFF;
+    /* 背景を白に変更 */
+    padding: 50px;
+    /* 内側の余白 */
+    border-radius: 10px;
+    /* 角の丸み */
+    box-shadow: none;
+    /* 影を削除 */
+    margin: 50px auto;
+    /* 上下左右中央に配置 */
+}
+
+/* タイトル「Contact」 */
+.contact-title {
+    font-family: 'Inika', serif;
+    /* Inikaフォントを使用 */
+    font-size: 2rem;
+    /* フォントサイズ */
+    font-weight: 400;
+    /* フォントの太さ */
+    color: #8B7969;
+    /* 文字色 */
+    text-align: center;
+    /* 中央寄せ */
+    margin-bottom: 40px;
+    /* 下部の余白 */
+}
+
+/* フォームのグリッドコンテナ */
+.form-grid-container {
+    display: grid;
+    /* グリッドレイアウトを適用 */
+    grid-template-columns: 120px 1fr;
+    /* 1列目（ラベル）を固定幅、2列目（入力）を可変幅 */
+    gap: 25px 20px;
+    /* 行と列の隙間 */
+    align-items: flex-start;
+    /* 各行のアイテムを上揃えにする */
+}
+
+/* 各フォームグループ（グリッドの行として機能） */
+.form-group {
+    display: contents;
+    /* form-group自体はレイアウトに影響せず、子要素が直接グリッドアイテムになる */
+}
+
+/* ラベルの列 */
+.label-column {
+    grid-column: 1;
+    /* グリッドの1列目に配置 */
+    text-align: left;
+    /* 左寄せ */
+    padding-top: 12px;
+    /* 入力フィールドのパディングに合わせて調整 */
+}
+
+/* 入力フィールドの列 */
+.input-column {
+    grid-column: 2;
+    /* グリッドの2列目に配置 */
+    width: 100%;
+    /* 親の幅を占める */
+    display: flex;
+    /* Flexbox レイアウト */
+    flex-direction: column;
+    /* 子要素を縦方向に並べる */
+    align-items: flex-start;
+    /* 子要素を左揃えにする */
+}
+
+/* ラベルのスタイル */
+.form-label {
+    display: block;
+    /* ブロック要素 */
+    font-size: 0.95rem;
+    /* フォントサイズ */
+    font-weight: 650;
+    /* フォントの太さ */
+    color: #8B7969;
+    /* 文字色 */
+    margin-bottom: 0;
+    /* ラベルのデフォルトマージンをリセット */
+}
+
+/* 必須マークのスタイル */
+.required-mark {
+    color: #E6B5A1;
+    /* スクリーンショットの赤色に近づける */
+    font-size: 0.8em;
+    /* サイズ */
+    vertical-align: super;
+    /* 上付き文字 */
+    margin-left: 5px;
+    /* 左側の余白 */
+}
+
+/* 入力フィールド、セレクトボックス、テキストエリアの共通スタイル */
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    /* 幅を100%に設定 */
+    padding: 12px 15px;
+    border: none;
+    /* ボーダーを削除 */
+    background-color: #F4F4F4;
+    /* 背景色 */
+    border-radius: 5px;
+    /* 角の丸み */
+    font-size: 0.9rem;
+    /* フォントサイズ */
+    color: #333;
+    /* 文字色 */
+    box-sizing: border-box;
+    /* paddingとborderを幅に含める */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* トランジション効果 */
+    font-family: sans-serif;
+    /* 入力フィールドは標準的なフォントに */
+}
+
+/* プレースホルダーのスタイル */
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #BEB1A6;
+    /* スクリーンショットのプレースホルダーの色に近づける */
+}
+
+/* フォーカス時のスタイル */
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    /* アウトラインを削除 */
+    border-color: #8B7A6C;
+    /* ボーダー色（フォーカス時は残す） */
+    box-shadow: 0 0 0 1px rgba(139, 122, 108, 0.2);
+    /* 影 */
+}
+
+/* お名前、電話番号のグループ化された入力欄 */
+.name-fields,
+.tel-fields {
+    display: flex;
+    /* Flexbox レイアウト */
+    gap: 15px;
+    /* 要素間の隙間 */
+    align-items: stretch;
+    /* 子要素の高さが揃うように変更 */
+    width: 100%;
+    /* 親要素の幅いっぱいに広げる */
+}
+
+.name-fields .name-field-item,
+.tel-fields .tel-part {
+    flex: 1;
+    /* 利用可能なスペースを均等に分配 */
+    min-width: 0;
+    /* Flexアイテムの最小幅を設定し、内容の切り捨てを防ぐ */
+}
+
+.tel-fields span {
+    /* 電話番号のハイフンのスタイル */
+    color: #333;
+    font-size: 1.2rem;
+    /* 少し大きくして見やすく */
+    font-weight: bold;
+    line-height: 1;
+    /* 高さを調整して垂直方向の中央に */
+    padding: 0 5px;
+    /* ハイフンの左右のパディングを調整 */
+    display: flex;
+    /* flexアイテムとして中央揃えしやすく */
+    align-items: center;
+    /* 垂直方向の中央揃え */
+    justify-content: center;
+    /* 水平方向の中央揃え */
+}
+
+/* 性別ラジオボタンのグループ */
+.gender-options {
+    display: flex;
+    /* Flexbox レイアウト */
+    gap: 30px;
+    /* 要素間の隙間 */
+    align-items: center;
+    /* 垂直方向の中央揃え */
+    width: 100%;
+    /* 親の幅を占める */
+}
+
+.gender-option {
+    display: flex;
+    /* Flexbox レイアウト */
+    align-items: center;
+    /* 垂直方向の中央揃え */
+    color: #333;
+    /* 文字色 */
+}
+
+.gender-option input[type="radio"] {
+    margin-right: 8px;
+    /* 右側の余白 */
+    width: 18px;
+    /* サイズ */
+    height: 18px;
+    /* サイズ */
+    accent-color: #8B7A6C;
+    /* チェック時の色 */
+}
+
+.gender-option label {
+    margin-bottom: 0;
+    /* デフォルトマージンをリセット */
+    font-weight: normal;
+    /* 太字ではない */
+    color: #333;
+    /* 文字色 */
+}
+
+/* エラーメッセージのスタイル */
+.error-message {
+    color: #e53e3e;
+    /* 赤色 */
+    font-size: 0.8rem;
+    /* フォントサイズ */
+    font-weight: 600;
+    /* 太さ */
+    text-align: left;
+    /* 左寄せ */
+    margin-top: 5px;
+    /* 上部の余白 */
+    display: block;
+    /* ブロック要素として表示 */
+    width: 100%;
+    /* 幅を100%に設定 */
+}
+
+/* input/select/textareaとエラーメッセージを囲むための共通ラッパー */
+.field-wrapper {
+    width: 100%;
+    /* 親要素の幅いっぱいに広げる */
+    display: flex;
+    /* Flexbox レイアウト */
+    flex-direction: column;
+    /* 子要素（input/select/textareaとerror）を縦方向に並べる */
+    align-items: flex-start;
+    /* 子要素を左揃えにする */
+}
+
+/* 送信ボタンのスタイル */
+.submit-button {
+    display: block;
+    /* ブロック要素 */
+    background-color: #8B7A6C;
+    /* 背景色 */
+    color: #fff;
+    /* 文字色 */
+    padding: 12px 30px;
+    /* 内側の余白 */
+    border: none;
+    /* ボーダーなし */
+    border-radius: 5px;
+    /* 角の丸み */
+    font-size: 1.1rem;
+    /* フォントサイズ */
+    font-weight: 700;
+    /* フォントの太さ */
+    cursor: pointer;
+    /* カーソルをポインターに */
+    transition: background-color 0.2s ease-in-out;
+    /* トランジション効果 */
+    text-align: center;
+    /* 中央寄せ */
+    width: 200px;
+    /* 幅 */
+    margin: 40px auto 0 auto;
+    /* 上部の余白と左右中央寄せ */
+    font-family: 'Inika', serif;
+    /* Inikaフォントを適用 */
+}
+
+.submit-button:hover {
+    background-color: #7a6b5e;
+    /* ホバー時の色 */
+}

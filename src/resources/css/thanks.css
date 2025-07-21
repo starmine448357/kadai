@@ -1,0 +1,85 @@
+/* public/css/thanks.css */
+
+body {
+    overflow: hidden;
+    /* 背景の文字がはみ出さないように */
+    position: relative;
+    /* 背景文字の基準 */
+}
+
+/* 背景の透かし文字のスタイル */
+.background-text {
+    position: absolute;
+    /* 絶対配置 */
+    top: 50%;
+    /* 垂直方向中央 */
+    left: 50%;
+    /* 水平方向中央 */
+    transform: translate(-50%, -50%);
+    /* 中央に配置 */
+    font-family: 'Inika', serif;
+    /* Inikaフォントを使用 */
+    font-size: 15rem;
+    /* 非常に大きなフォントサイズ */
+    color: rgba(220, 207, 197, 0.6);
+    /* 薄い色で透明度を設定 */
+    white-space: nowrap;
+    /* テキストの折り返しを防ぐ */
+    pointer-events: none;
+    /* クリックイベントを無効にする（下の要素がクリックできるように） */
+    z-index: -1;
+    /* 他のコンテンツの下に表示 */
+}
+
+/* サンクスコンテナのスタイル */
+.thanks-container {
+    text-align: center;
+    /* 中央寄せ */
+    z-index: 1;
+    /* 背景文字より手前に表示 */
+    position: relative;
+    /* z-indexを適用するため */
+}
+
+/* メッセージのスタイル */
+.thanks-message {
+    font-family: 'Inter', sans-serif;
+    /* Interフォントを使用 */
+    font-size: 1.8rem;
+    /* フォントサイズ */
+    color: #8B7969;
+    /* 文字色 */
+    margin-bottom: 50px;
+    /* 下部の余白 */
+    font-weight: bold;
+    /* 太字 */
+}
+
+/* HOMEボタンのスタイル */
+.home-button {
+    background-color: #8B7A6C;
+    /* 背景色 */
+    color: #fff;
+    /* 文字色 */
+    padding: 12px 50px;
+    /* 内側の余白 */
+    border: none;
+    /* ボーダーなし */
+    border-radius: 5px;
+    /* 角の丸み */
+    font-size: 1.1rem;
+    /* フォントサイズ */
+    font-weight: 700;
+    /* フォントの太さ */
+    cursor: pointer;
+    /* カーソルをポインターに */
+    transition: background-color 0.2s ease-in-out;
+    /* トランジション効果 */
+    font-family: 'Inika', serif;
+    /* Inikaフォントを適用 */
+}
+
+.home-button:hover {
+    background-color: #7a6b5e;
+    /* ホバー時の色 */
+}

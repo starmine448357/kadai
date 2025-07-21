@@ -1,0 +1,128 @@
+/* public/css/auth.css */
+
+/* AuthCard のスタイル (ログイン/登録フォームの白いボックス) */
+.auth-card-wrapper {
+    width: 100%;
+    max-width: 450px;
+    /* 幅の調整 */
+    background-color: #fff;
+    /* 白い背景 */
+    padding: 40px;
+    /* 内側の余白 */
+    border-radius: 10px;
+    /* 角の丸み */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* 影 */
+    margin: 50px auto;
+    /* 上下左右中央に配置 */
+}
+
+/* ラベルのスタイル */
+label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    /* 少し太く */
+    color: #8B7969;
+    /* タイトルと同じ色に */
+    margin-bottom: 8px;
+    display: block;
+    /* ブロック要素にして、次の要素との間にスペースを確保 */
+}
+
+/* 入力フィールドのスタイル */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    background-color: #F4F4F4;
+    /* 薄いグレーの背景色 */
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #333;
+    box-sizing: border-box;
+    /* paddingとborderを幅に含める */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input::placeholder {
+    color: #BEB1A6;
+    /* プレースホルダーの色 */
+}
+
+input:focus {
+    outline: none;
+    border-color: #8B7A6C;
+    /* フォーカス時のボーダー色 */
+    box-shadow: 0 0 0 1px rgba(139, 122, 108, 0.2);
+    /* フォーカス時の影 */
+}
+
+/* ボタンのスタイル (Tailwind のデフォルトボタンクラスを上書き) */
+button[type="submit"] {
+    background-color: #8B7A6C !important;
+    /* ボタンの背景色 */
+    color: #fff !important;
+    /* 文字色 */
+    padding: 12px 30px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease-in-out !important;
+    text-align: center !important;
+    width: auto !important;
+    /* 幅を自動調整 */
+    margin-top: 30px !important;
+    /* 上部の余白 */
+    font-family: 'Inika', serif !important;
+    /* Inikaフォントを適用 */
+    text-transform: none !important;
+    /* 大文字変換を無効にする */
+    letter-spacing: normal !important;
+    /* 文字間隔を通常に戻す */
+    margin-left: auto !important;
+    /* 右寄せにするための調整 */
+    margin-right: 0 !important;
+    display: block !important;
+    /* 中央寄せではなくブロック要素に */
+}
+
+button[type="submit"]:hover {
+    background-color: #7a6b5e !important;
+    /* ホバー時の色 */
+}
+
+/* リンクのスタイル (パスワード忘れなど) */
+a.underline.text-sm {
+    color: #8B7969 !important;
+    /* リンクの色 */
+    text-decoration: underline !important;
+    /* 下線 */
+    font-weight: normal !important;
+    /* 太字ではない */
+}
+
+a.underline.text-sm:hover {
+    color: #7a6b5e !important;
+    /* ホバー時の色 */
+}
+
+/* ログイン/登録フォームのタイトル */
+.auth-title {
+    font-family: 'Inika', serif;
+    /* Inikaフォントを使用 */
+    font-size: 2rem;
+    /* フォントサイズ */
+    font-weight: 400;
+    /* フォントの太さ */
+    color: #8B7969;
+    /* 文字色 */
+    text-align: center;
+    /* 中央寄せ */
+    margin-bottom: 40px;
+    /* 下部の余白 */
+}
